@@ -1,0 +1,458 @@
+{
+  "company": {
+    "name": "سافيتو",
+    "fullName": "الشركة العربية لصناعة مواد البناء",
+    "logo": "🏭",
+    "tagline": "نبني المستقبل بجودة لا تضاهى",
+    "description": "رواد في صناعة مواد البناء عالية الجودة منذ أكثر من 30 عاماً، نقدم حلولاً متكاملة للدهانات والعوازل والمواد العازلة بأعلى معايير الجودة العالمية.",
+    "established": 1990,
+    "employees": 250,
+    "projects": 1200,
+    "clients": 5000,
+    "phone": "+20 12 3456 7890",
+    "email": "info@safito.com",
+    "address": "المنطقة الصناعية الثالثة، مدينة السادات، المنوفية، مصر",
+    "workingHours": "من الأحد إلى الخميس 8:00 ص - 5:00 م",
+    "social": {
+      "facebook": "https://facebook.com/safito",
+      "linkedin": "https://linkedin.com/company/safito",
+      "whatsapp": "+201234567890"
+    }
+  },
+
+  "products": [
+    {
+      "id": "PROD001",
+      "code": "SFT-100",
+      "name": "دهانات داخلية فاخرة",
+      "category": "دهانات",
+      "subcategory": "داخلية",
+      "description": "دهان أكريليك داخلي عالي الجودة، مقاوم للغسيل، صديق للبيئة، خالي من الرصاص والزئبق.",
+      "specifications": {
+        "type": "أكريليك مائي",
+        "coverage": "12-15 م²/لتر",
+        "dryingTime": "ساعتان",
+        "colors": "أكثر من 200 لون",
+        "packaging": "3 لتر، 10 لتر، 20 لتر"
+      },
+      "applications": "الأسقف والحوائط الداخلية في المنازل والمكاتب والمنشآت التجارية",
+      "image": "🎨",
+      "gallery": ["🎨", "🖌️", "🏠"],
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "featured": true,
+      "price": "من 250 ج.م/لتر"
+    },
+    {
+      "id": "PROD002",
+      "code": "SFT-200",
+      "name": "دهانات خارجية مقاومة",
+      "category": "دهانات",
+      "subcategory": "خارجية",
+      "description": "دهان أكريليك خارجي فائق المقاومة للعوامل الجوية والأشعة فوق البنفسجية، يدوم حتى 10 سنوات.",
+      "specifications": {
+        "type": "أكريليك سيليكوني",
+        "coverage": "10-12 م²/لتر",
+        "dryingTime": "3 ساعات",
+        "uvResistance": "عالية جداً",
+        "waterResistance": "ممتازة"
+      },
+      "applications": "واجهات المباني، الأسطح الخارجية، المنشآت الصناعية",
+      "image": "🏢",
+      "gallery": ["🏢", "🏭", "🌞"],
+      "videoUrl": "",
+      "featured": true,
+      "price": "من 350 ج.م/لتر"
+    },
+    {
+      "id": "PROD003",
+      "code": "SFT-300",
+      "name": "معجون الحوائط الفاخر",
+      "category": "معاجين",
+      "subcategory": "تحضير الأسطح",
+      "description": "معجون ناعم فائق الجودة لتنعيم الحوائط وسد الشقوق قبل الدهان، سهل الصنفرة ولا يتشقق.",
+      "specifications": {
+        "type": "أكريليك معالج",
+        "coverage": "1-2 كجم/م²",
+        "dryingTime": "4-6 ساعات",
+        "finish": "ناعم جداً",
+        "packaging": "5 كجم، 10 كجم، 20 كجم"
+      },
+      "applications": "جميع الأسطح الداخلية قبل الدهان، إصلاح الشقوق والتجاويف",
+      "image": "🧴",
+      "gallery": ["🧴", "🏚️", "🛠️"],
+      "videoUrl": "",
+      "featured": false,
+      "price": "من 120 ج.م/كجم"
+    },
+    {
+      "id": "PROD004",
+      "code": "SFT-400",
+      "name": "عازل حراري ومائي",
+      "category": "عوازل",
+      "subcategory": "حرارية ومائية",
+      "description": "عازل حراري ومائي متعدد الاستخدامات، يقلل استهلاك الطاقة بنسبة تصل إلى 40%، يعزل الرطوبة تماماً.",
+      "specifications": {
+        "type": "بوليمري معدل",
+        "thermalConductivity": "0.028 W/m·K",
+        "waterResistance": "100%",
+        "application": "بالرش أو الفرشاة",
+        "packaging": "10 لتر، 20 لتر"
+      },
+      "applications": "الأسطح، الخزانات، الحوائط الخارجية، الأساسات",
+      "image": "☀️",
+      "gallery": ["☀️", "💧", "🏠"],
+      "videoUrl": "",
+      "featured": true,
+      "price": "من 450 ج.م/لتر"
+    },
+    {
+      "id": "PROD005",
+      "code": "SFT-500",
+      "name": "مواد لاصقة للبلاط",
+      "category": "مواد لاصقة",
+      "subcategory": "بلاط وسيراميك",
+      "description": "مادة لاصقة قوية للبلاط والسيراميك والرخام، مقاومة للماء، مناسبة للاستخدامات الداخلية والخارجية.",
+      "specifications": {
+        "type": "أسمنتية معدلة بالبوليمر",
+        "openTime": "20 دقيقة",
+        "strength": "عالية جداً",
+        "waterResistance": "ممتازة",
+        "packaging": "25 كجم"
+      },
+      "applications": "تركيب السيراميك، البورسلين، الرخام، الحجر الطبيعي",
+      "image": "🪴",
+      "gallery": ["🪴", "🏗️", "🔨"],
+      "videoUrl": "",
+      "featured": false,
+      "price": "من 180 ج.م/كجم"
+    }
+  ],
+
+  "categories": [
+    { "id": "paints", "name": "الدهانات", "icon": "🎨", "count": 2 },
+    { "id": "putties", "name": "المعاجين", "icon": "🧴", "count": 1 },
+    { "id": "insulation", "name": "العوازل", "icon": "☀️", "count": 1 },
+    { "id": "adhesives", "name": "المواد اللاصقة", "icon": "🪴", "count": 1 }
+  ],
+
+  "projects": [
+    {
+      "id": "PRJ001",
+      "name": "برج الأوراس - القاهرة الجديدة",
+      "description": "تزويد البرج بأكمله بدهانات خارجية فائقة الجودة مقاومة للعوامل الجوية، مع عوازل حرارية للواجهات.",
+      "client": "شركة الأوراس للاستثمار العقاري",
+      "date": "2024",
+      "products": ["SFT-200", "SFT-400"],
+      "image": "🏢",
+      "gallery": ["🏢", "🌆", "🏙️"],
+      "testimonial": "منتجات سافيتو ذات جودة استثنائية، ونشكرهم على الالتزام بالمواعيد.",
+      "testimonialBy": "مهندس أحمد سامي - مدير المشروع"
+    },
+    {
+      "id": "PRJ002",
+      "name": "مدينة الإنتاج الإعلامي - 6 أكتوبر",
+      "description": "دهانات داخلية عالية الجودة للمباني الإدارية والاستوديوهات، مع معاجين فاخرة لتنعيم الحوائط.",
+      "client": "الهيئة الوطنية للإعلام",
+      "date": "2023",
+      "products": ["SFT-100", "SFT-300"],
+      "image": "📺",
+      "gallery": ["📺", "🎬", "📡"],
+      "testimonial": "جودة ممتازة وتعاون رائع من فريق سافيتو.",
+      "testimonialBy": "مهندس محمد رشاد - استشاري المشروع"
+    },
+    {
+      "id": "PRJ003",
+      "name": "مشروع الإسكان الاجتماعي - العاصمة الإدارية",
+      "description": "تزويد 5000 وحدة سكنية بدهانات داخلية وخارجية، مواد لاصقة للبلاط، وعوازل حرارية للأسطح.",
+      "client": "وزارة الإسكان والمرافق",
+      "date": "2024",
+      "products": ["SFT-100", "SFT-200", "SFT-500", "SFT-400"],
+      "image": "🏘️",
+      "gallery": ["🏘️", "🏠", "🛋️"],
+      "testimonial": "شكراً لسافيتو على التزامهم بمعايير الجودة وتوريد الكميات المطلوبة في الوقت المحدد.",
+      "testimonialBy": "لجنة المشتريات - وزارة الإسكان"
+    }
+  ],
+
+  "employees": [
+    {
+      "id": "EMP001",
+      "code": "1001",
+      "fullName": "أحمد محمد علي",
+      "jobTitle": "مدير المصنع",
+      "department": "الإدارة العليا",
+      "subDepartment": "الإدارة التنفيذية",
+      "email": "ahmed.ali@safito.com",
+      "phone": "01001234567",
+      "dailyCups": 5,
+      "isException": true,
+      "exceptionReason": "مدير المصنع",
+      "password": "admin123",
+      "role": "admin",
+      "avatar": "👨‍💼",
+      "joinDate": "2015-01-15"
+    },
+    {
+      "id": "EMP002",
+      "code": "1002",
+      "fullName": "محمد إبراهيم حسن",
+      "jobTitle": "مدير الموارد البشرية",
+      "department": "الموارد البشرية",
+      "subDepartment": "الإدارة",
+      "email": "mohamed.hassan@safito.com",
+      "phone": "01002345678",
+      "dailyCups": 4,
+      "isException": true,
+      "exceptionReason": "مدير HR",
+      "password": "hr123",
+      "role": "hr_manager",
+      "avatar": "👨‍💼",
+      "joinDate": "2016-03-20"
+    },
+    {
+      "id": "EMP003",
+      "code": "1003",
+      "fullName": "خالد عبدالله سعيد",
+      "jobTitle": "مدير المخازن",
+      "department": "المخازن",
+      "subDepartment": "الخدمات اللوجستية",
+      "email": "khaled.saeed@safito.com",
+      "phone": "01003456789",
+      "dailyCups": 3,
+      "isException": false,
+      "exceptionReason": "",
+      "password": "warehouse123",
+      "role": "warehouse",
+      "avatar": "👨‍💼",
+      "joinDate": "2017-05-10"
+    },
+    {
+      "id": "EMP004",
+      "code": "1004",
+      "fullName": "سامي محمود رشاد",
+      "jobTitle": "مدير الصيانة",
+      "department": "الصيانة",
+      "subDepartment": "الفنية",
+      "email": "sami.rashad@safito.com",
+      "phone": "01004567890",
+      "dailyCups": 3,
+      "isException": false,
+      "exceptionReason": "",
+      "password": "maintenance123",
+      "role": "maintenance",
+      "avatar": "🔧",
+      "joinDate": "2018-02-01"
+    },
+    {
+      "id": "EMP005",
+      "code": "1005",
+      "fullName": "طارق فهمي عبدالرحمن",
+      "jobTitle": "مدير الإنتاج",
+      "department": "الإنتاج",
+      "subDepartment": "الفنية",
+      "email": "tarek.fahmy@safito.com",
+      "phone": "01005678901",
+      "dailyCups": 3,
+      "isException": false,
+      "exceptionReason": "",
+      "password": "production123",
+      "role": "production",
+      "avatar": "🏭",
+      "joinDate": "2016-11-15"
+    },
+    {
+      "id": "EMP006",
+      "code": "1006",
+      "fullName": "ياسر محمد أحمد",
+      "jobTitle": "مدير الجودة",
+      "department": "الجودة",
+      "subDepartment": "الفنية",
+      "email": "yasser.ahmed@safito.com",
+      "phone": "01006789012",
+      "dailyCups": 3,
+      "isException": false,
+      "exceptionReason": "",
+      "password": "quality123",
+      "role": "quality",
+      "avatar": "✅",
+      "joinDate": "2017-09-20"
+    },
+    {
+      "id": "EMP007",
+      "code": "1007",
+      "fullName": "عمرو سيد محمود",
+      "jobTitle": "مدير المبيعات",
+      "department": "المبيعات",
+      "subDepartment": "التجاري",
+      "email": "amr.mahmoud@safito.com",
+      "phone": "01007890123",
+      "dailyCups": 3,
+      "isException": false,
+      "exceptionReason": "",
+      "password": "sales123",
+      "role": "sales",
+      "avatar": "💰",
+      "joinDate": "2018-07-01"
+    },
+    {
+      "id": "EMP008",
+      "code": "1008",
+      "fullName": "مصطفى علي إبراهيم",
+      "jobTitle": "مسؤول البوفيه",
+      "department": "الخدمات",
+      "subDepartment": "البوفيه",
+      "email": "mostafa.ibrahim@safito.com",
+      "phone": "01008901234",
+      "dailyCups": 3,
+      "isException": false,
+      "exceptionReason": "",
+      "password": "canteen123",
+      "role": "canteen",
+      "avatar": "🥤",
+      "joinDate": "2019-03-10"
+    },
+    {
+      "id": "EMP009",
+      "code": "1009",
+      "fullName": "حسن عبدالفتاح سليمان",
+      "jobTitle": "رئيس الأمن",
+      "department": "الأمن",
+      "subDepartment": "الخدمات",
+      "email": "hassan.soliman@safito.com",
+      "phone": "01009012345",
+      "dailyCups": 3,
+      "isException": false,
+      "exceptionReason": "",
+      "password": "security123",
+      "role": "security",
+      "avatar": "👮‍♂️",
+      "joinDate": "2015-12-01"
+    }
+  ],
+
+  "warehouseItems": [
+    {
+      "code": "RAW001",
+      "name": "أكريليك خام",
+      "category": "خامات إنتاج",
+      "description": "مادة خام أساسية لإنتاج الدهانات الأكريليك",
+      "unit": "كيلو",
+      "quantity": 8500,
+      "minimum": 2000,
+      "supplier": "شركة الكيميا الحديثة",
+      "location": "مخزن 1 - رف A1-A5",
+      "lastOrder": "2026-03-15",
+      "nextOrder": "2026-04-10"
+    },
+    {
+      "code": "RAW002",
+      "name": "صبغات ألوان",
+      "category": "خامات إنتاج",
+      "description": "صبغات مركزة لإنتاج الألوان المختلفة",
+      "unit": "لتر",
+      "quantity": 3200,
+      "minimum": 800,
+      "supplier": "شركة الصبغات العالمية",
+      "location": "مخزن 1 - رف B1-B4",
+      "lastOrder": "2026-03-10",
+      "nextOrder": "2026-04-05"
+    },
+    {
+      "code": "MNT001",
+      "name": "منظف أرضيات صناعي",
+      "category": "خامات نظافة",
+      "description": "منظف مركز للأرضيات الصناعية والإدارات",
+      "unit": "لتر",
+      "quantity": 750,
+      "minimum": 150,
+      "supplier": "شركة النظافة الحديثة",
+      "location": "مخزن 2 - رف C1-C2",
+      "lastOrder": "2026-03-01",
+      "nextOrder": "2026-04-15"
+    },
+    {
+      "code": "SPR001",
+      "name": "سيور ناقلة",
+      "category": "قطع غيار",
+      "description": "سيور لماكينات الإنتاج",
+      "unit": "قطعة",
+      "quantity": 35,
+      "minimum": 20,
+      "supplier": "شركة المعدات الصناعية",
+      "location": "مخزن 3 - رف D1-D2",
+      "lastOrder": "2026-02-20",
+      "nextOrder": "2026-04-20"
+    }
+  ],
+
+  "dailyCups": [
+    {"date": "2026-03-28", "employeeId": "EMP001", "count": 2, "drinkType": "قهوة", "time": "09:15", "status": "normal"},
+    {"date": "2026-03-28", "employeeId": "EMP001", "count": 1, "drinkType": "شاي", "time": "13:30", "status": "normal"},
+    {"date": "2026-03-28", "employeeId": "EMP002", "count": 2, "drinkType": "قهوة", "time": "08:45", "status": "normal"},
+    {"date": "2026-03-28", "employeeId": "EMP003", "count": 1, "drinkType": "مياه غازية", "time": "10:00", "status": "normal"}
+  ],
+
+  "visitors": [
+    {
+      "id": "VIS001",
+      "fullName": "خالد محمد عبدالله",
+      "jobTitle": "مدير مشتريات",
+      "code": "C001",
+      "company": "شركة المقاولون العرب",
+      "visitReason": "تفاوض على عقد توريد",
+      "contactPerson": "EMP007",
+      "contactPersonName": "عمرو سيد محمود",
+      "checkIn": "2026-03-28 10:30:00",
+      "checkOut": "",
+      "status": "inside",
+      "badgePrinted": true,
+      "escort": "EMP007"
+    },
+    {
+      "id": "VIS002",
+      "fullName": "أحمد سمير فهمي",
+      "jobTitle": "مهندس استشاري",
+      "code": "C002",
+      "company": "شركة درة للاستشارات الهندسية",
+      "visitReason": "معاينة منتجات وتقييم",
+      "contactPerson": "EMP005",
+      "contactPersonName": "طارق فهمي",
+      "checkIn": "2026-03-28 11:15:00",
+      "checkOut": "2026-03-28 14:30:00",
+      "status": "left",
+      "badgePrinted": true,
+      "escort": "EMP005"
+    }
+  ],
+
+  "siteVisitors": [
+    {"date": "2026-03-28", "page": "home", "count": 45},
+    {"date": "2026-03-28", "page": "products", "count": 32},
+    {"date": "2026-03-28", "page": "projects", "count": 18}
+  ],
+
+  "faq": [
+    {
+      "question": "ما هي أوقات العمل الرسمية؟",
+      "answer": "أوقات العمل الرسمية من الأحد إلى الخميس من الساعة 8 صباحاً حتى 5 مساءً."
+    },
+    {
+      "question": "كيف يمكنني طلب عينة من المنتجات؟",
+      "answer": "يمكنك التواصل مع قسم المبيعات عبر الهاتف أو البريد الإلكتروني لتنسيق استلام العينات."
+    },
+    {
+      "question": "ما هي طرق الدفع المتاحة؟",
+      "answer": "نقبل الدفع نقداً، التحويل البنكي، والشيكات المؤجلة للعملاء المعتمدين."
+    },
+    {
+      "question": "هل توفرون خدمات الشحن؟",
+      "answer": "نعم، نوفر خدمة الشحن لجميع محافظات الجمهورية والعقود التصديرية."
+    }
+  ],
+
+  "certificates": [
+    {"name": "ISO 9001:2015", "description": "نظام إدارة الجودة", "year": "2025"},
+    {"name": "ISO 14001:2015", "description": "نظام إدارة البيئة", "year": "2025"},
+    {"name": "OHSAS 18001", "description": "نظام إدارة الصحة والسلامة المهنية", "year": "2024"}
+  ]
+}
