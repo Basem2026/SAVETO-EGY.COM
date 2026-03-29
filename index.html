@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="سافيتو - الشركة العربية لصناعة مواد البناء. رواد في صناعة الدهانات والعوازل والمواد اللاصقة منذ 1990">
+    <title>سافيتو | الشركة العربية لصناعة مواد البناء</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a4d8c;
+            --primary-dark: #0e3a6b;
+            --primary-light: #2c6eae;
+            --secondary: #d4af37;
+            --accent: #e67e22;
+            --success: #27ae60;
+            --danger: #e74c3c;
+            --warning: #f39c12;
+            --dark: #2c3e50;
+            --gray: #7f8c8d;
+            --light: #ecf0f1;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+            --shadow-hover: 0 20px 40px rgba(0,0,0,0.15);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Cairo', 'Segoe UI', 'Tahoma', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--light); }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 5px; }
+
+        /* Navbar */
+        .navbar {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        .navbar-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .logo span {
+            background: var(--secondary);
+            color: var(--primary-dark);
+            padding: 0.2rem 0.8rem;
+            border-radius: 50px;
+            font-size: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 0.6rem 1.2rem;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+            color: var(--dark);
+            font-family: inherit;
+        }
+
+        .nav-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .nav-btn.active {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--light);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+        }
+
+        .user-avatar {
+            font-size: 1.5rem;
+        }
+
+        .user-name {
+            font-weight: 600;
+        }
+
+        .logout-btn {
+            background: var(--danger);
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .logout-btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: calc(100vh - 140px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light);
+        }
+
+        .card-header h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .card-header .icon {
+            font-size: 2rem;
+        }
+
+        /* Grids */
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+
+        /* Stat Cards */
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 1.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Forms */
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid var(--light);
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 77, 140, 0.1);
+        }
+
+        button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        button.secondary {
+            background: var(--gray);
+        }
+
+        /* Tables */
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: right;
+            border-bottom: 1px solid var(--light);
+        }
+
+        th {
+            background: var(--light);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: rgba(26, 77, 140, 0.05);
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-success { background: var(--success); color: white; }
+        .badge-warning { background: var(--warning); color: var(--dark); }
+        .badge-danger { background: var(--danger); color: white; }
+        .badge-info { background: var(--primary); color: white; }
+
+        /* Product Card */
+        .product-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .product-icon {
+            font-size: 4rem;
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--light);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            color: var(--secondary);
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: var(--white);
+            border-radius: 24px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 2rem;
+        }
+
+        /* Login Screen */
+        .login-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3000;
+        }
+
+        .login-card {
+            background: var(--white);
+            border-radius: 32px;
+            padding: 2.5rem;
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        .login-logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .login-card h2 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Alert */
+        .alert {
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border-right: 4px solid var(--success);
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border-right: 4px solid var(--danger);
+        }
+
+        .alert-info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border-right: 4px solid var(--primary);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        /* Hidden */
+        .hidden { display: none; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar-container { flex-direction: column; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+            .container { padding: 1rem; }
+            .nav-links { justify-content: center; }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Login Screen -->
+<div id="loginScreen" class="login-screen">
+    <div class="login-card">
+        <div class="login-logo">🏭</div>
+        <h2>سافيتو</h2>
+        <p style="color: var(--gray); margin-bottom: 1.5rem;">نظام إدارة المصنع المتكامل</p>
+        <div id="loginError" class="alert alert-error hidden"></div>
+        <div class="form-group">
+            <input type="text" id="loginId" placeholder="الكود الوظيفي" style="text-align: center;">
+        </div>
+        <div class="form-group">
+            <input type="password" id="loginPassword" placeholder="كلمة المرور" style="text-align: center;">
+        </div>
+        <button onclick="login()" style="width: 100%; margin-bottom: 1rem;">دخول</button>
+        <button onclick="enterAsGuest()" class="secondary" style="width: 100%; background: var(--gray);">تصفح كزائر</button>
+    </div>
+</div>
+
+<!-- Main App -->
+<div id="mainApp" class="hidden">
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                🏭 سافيتو
+                <span>مواد بناء</span>
+            </div>
+            <div class="nav-links" id="navLinks"></div>
+            <div class="user-info" id="userInfo"></div>
+        </div>
+    </nav>
+
+    <div class="container" id="contentArea"></div>
+
+    <footer class="footer">
+        <p>© 2026 سافيتو - الشركة العربية لصناعة مواد البناء. جميع الحقوق محفوظة</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem;">نظام إدارة المصنع المتكامل - الإصدار 2.0</p>
+    </footer>
+</div>
+
+<script>
+    let appData = null;
+    let currentUser = null;
+    let isGuest = true;
+
+    async function loadData() {
+        try {
+            const response = await fetch('data.json');
+            appData = await response.json();
+        } catch (error) {
+            console.error('Error loading data:', error);
+            showToast('حدث خطأ في تحميل البيانات', 'error');
+        }
+    }
+
+    function showToast(message, type = 'info') {
+        const toast = document.createElement('div');
+        toast.className = `alert alert-${type}`;
+        toast.style.position = 'fixed';
+        toast.style.bottom = '20px';
+        toast.style.right = '20px';
+        toast.style.zIndex = '9999';
+        toast.style.maxWidth = '300px';
+        toast.innerHTML = message;
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 3000);
+    }
+
+    function login() {
+        const id = document.getElementById('loginId').value;
+        const password = document.getElementById('loginPassword').value;
+        
+        if (!appData) return;
+        
+        const employee = appData.employees.find(e => e.code === id && e.password === password);
+        
+        if (employee) {
+            currentUser = employee;
+            isGuest = false;
+            document.getElementById('loginScreen').classList.add('hidden');
+            document.getElementById('mainApp').classList.remove('hidden');
+            renderNavbar();
+            renderDashboard();
+            showToast(`مرحباً ${employee.fullName}`, 'success');
+        } else {
+            const errorDiv = document.getElementById('loginError');
+            errorDiv.textContent = '❌ الكود الوظيفي أو كلمة المرور غير صحيحة';
+            errorDiv.classList.remove('hidden');
+            setTimeout(() => errorDiv.classList.add('hidden'), 3000);
+        }
+    }
+
+    function enterAsGuest() {
+        currentUser = null;
+        isGuest = true;
+        document.getElementById('loginScreen').classList.add('hidden');
+        document.getElementById('mainApp').classList.remove('hidden');
+        renderGuestNavbar();
+        renderGuestHome();
+    }
+
+    function renderGuestNavbar() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.innerHTML = `
+            <button class="nav-btn" onclick="renderGuestHome()">🏠 الرئيسية</button>
+            <button class="nav-btn" onclick="renderProducts()">🎨 المنتجات</button>
+            <button class="nav-btn" onclick="renderProjects()">🏗️ مشاريعنا</button>
+            <button class="nav-btn" onclick="renderAbout()">📖 عن الشركة</button>
+            <button class="nav-btn" onclick="renderContact()">📞 اتصل بنا</button>
+            <button class="nav-btn" onclick="showLoginModal()">🔐 تسجيل دخول</button>
+        `;
+        document.getElementById('userInfo').innerHTML = `
+            <div class="user-avatar">👤</div>
+            <div class="user-name">زائر</div>
+            <button class="logout-btn" onclick="logout()">تسجيل خروج</button>
+        `;
+    }
+
+    function renderNavbar() {
+        const navLinks = document.getElementById('navLinks');
+        let buttons = `
+            <button class="nav-btn" onclick="renderDashboard()">📊 لوحة التحكم</button>
+            <button class="nav-btn" onclick="renderCanteen()">🥤 البوفيه</button>
+            <button class="nav-btn" onclick="renderWarehouse()">📦 المخازن</button>
+            <button class="nav-btn" onclick="renderVisitors()">👥 زوار المصنع</button>
+        `;
+        
+        if (['admin', 'hr_manager'].includes(currentUser.role)) {
+            buttons += `<button class="nav-btn" onclick="renderHR()">👔 الموارد البشرية</button>`;
+            buttons += `<button class="nav-btn" onclick="renderReports()">📈 التقارير</button>`;
+        }
+        
+        if (['admin', 'production'].includes(currentUser.role)) {
+            buttons += `<button class="nav-btn" onclick="renderProduction()">🏭 الإنتاج</button>`;
+        }
+        
+        if (['admin', 'quality'].includes(currentUser.role)) {
+            buttons += `<button class="nav-btn" onclick="renderQuality()">✅ الجودة</button>`;
+        }
+        
+        if (['admin', 'sales'].includes(currentUser.role)) {
+            buttons += `<button class="nav-btn" onclick="renderSales()">💰 المبيعات</button>`;
+        }
+        
+        navLinks.innerHTML = buttons;
+        
+        document.getElementById('userInfo').innerHTML = `
+            <div class="user-avatar">${currentUser.avatar || '👤'}</div>
+            <div class="user-name">${currentUser.fullName}</div>
+            <div class="user-name" style="font-size:0.8rem; color:var(--gray)">${currentUser.jobTitle}</div>
+            <button class="logout-btn" onclick="logout()">تسجيل خروج</button>
+        `;
+    }
+
+    function logout() {
+        currentUser = null;
+        isGuest = true;
+        document.getElementById('mainApp').classList.add('hidden');
+        document.getElementById('loginScreen').classList.remove('hidden');
+        document.getElementById('loginId').value = '';
+        document.getElementById('loginPassword').value = '';
+    }
+
+    function showLoginModal() {
+        document.getElementById('loginScreen').classList.remove('hidden');
+        document.getElementById('mainApp').classList.add('hidden');
+    }
+
+    // ==================== GUEST SECTIONS ====================
+    function renderGuestHome() {
+        const html = `
+            <div class="hero fade-in">
+                <h1>${appData.company.fullName}</h1>
+                <p>${appData.company.tagline}</p>
+                <p style="margin-top: 1rem;">${appData.company.description}</p>
+            </div>
+            
+            <div class="grid-4">
+                <div class="stat-card"><div class="stat-number">${appData.company.established}</div><div class="stat-label">تأسيس الشركة</div></div>
+                <div class="stat-card"><div class="stat-number">${appData.company.employees}+</div><div class="stat-label">موظف</div></div>
+                <div class="stat-card"><div class="stat-number">${appData.company.projects}+</div><div class="stat-label">مشروع منفذ</div></div>
+                <div class="stat-card"><div class="stat-number">${appData.company.clients}+</div><div class="stat-label">عميل</div></div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header"><h2>📦 منتجاتنا المميزة</h2><span class="icon">🎨</span></div>
+                <div class="grid-3">
+                    ${appData.products.filter(p => p.featured).map(p => `
+                        <div class="product-card">
+                            <div class="product-icon">${p.image}</div>
+                            <div class="product-info">
+                                <h3 class="product-title">${p.name}</h3>
+                                <p style="font-size:0.9rem; color:var(--gray)">${p.description.substring(0, 80)}...</p>
+                                <div class="product-price">${p.price}</div>
+                                <button onclick="viewProduct('${p.id}')" style="width:100%; margin-top:0.5rem;">عرض التفاصيل</button>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header"><h2>🏗️ أحدث المشاريع</h2><span class="icon">🏢</span></div>
+                    ${appData.projects.slice(0, 2).map(p => `
+                        <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--light);">
+                            <h3>${p.name}</h3>
+                            <p style="color: var(--gray);">${p.description.substring(0, 100)}...</p>
+                            <small>${p.date}</small>
+                        </div>
+                    `).join('')}
+                    <button onclick="renderProjects()" class="secondary" style="background:transparent; color:var(--primary); border:2px solid var(--primary);">عرض كل المشاريع →</button>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h2>📜 الشهادات</h2><span class="icon">🏅</span></div>
+                    ${appData.certificates.map(c => `
+                        <div style="margin-bottom: 1rem;">
+                            <strong>${c.name}</strong>
+                            <p style="font-size:0.85rem; color:var(--gray)">${c.description} - ${c.year}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+        document.getElementById('contentArea').innerHTML = html;
+    }
+
+    function renderProducts() {
+        let html = `
+            <div class="hero" style="background: linear-gradient(135deg, var(--primary), var(--primary-light));">
+                <h1>🎨 منتجاتنا</h1>
+                <p>أحدث الدهانات والعوازل والمواد اللاصقة بأعلى معايير الجودة العالمية</p>
+            </div>
+            <div class="grid-3">
+        `;
+        
+        appData.products.forEach(p => {
+            html += `
+                <div class="product-card">
+                    <div class="product-icon">${p.image}</div>
+                    <div class="product-info">
+                        <h3 class="product-title">${p.name}</h3>
+                        <p style="font-size:0.9rem; color:var(--gray)">${p.description.substring(0, 100)}...</p>
+                        <div><strong>الفئة:</strong> ${p.category}</div>
+                        <div class="product-price">${p.price}</div>
+                        <button onclick="viewProduct('${p.id}')" style="width:100%; margin-top:0.5rem;">عرض التفاصيل</button>
+                    </div>
+                </div>
+            `;
+        });
+        
+        html += `</div>`;
+        document.getElementById('contentArea').innerHTML = html;
+    }
+
+    function viewProduct(productId) {
+        const product = appData.products.find(p => p.id === productId);
+        if (!product) return;
+        
+        const html = `
+            <div class="modal" onclick="closeModal(event)">
+                <div class="modal-content" onclick="event.stopPropagation()">
+                    <div style="text-align: center; font-size: 4rem;">${product.image}</div>
+                    <h2 style="color: var(--primary); margin: 1rem 0;">${product.name}</h2>
+                    <p><strong>الفئة:</strong> ${product.category}</p>
+                    <p><strong>الوصف:</strong> ${product.description}</p>
+                    <h3>📋 المواصفات الفنية:</h3>
+                    <ul style="margin-right: 1.5rem;">
+                        ${Object.entries(product.specifications).map(([k, v]) => `<li><strong>${k}:</strong> ${v}</li>`).join('')}
+                    </ul>
+                    <p><strong>الاستخدامات:</strong> ${product.applications}</p>
+                    <div class="product-price" style="font-size: 1.2rem;">${product.price}</div>
+                    ${product.videoUrl ? `<button onclick="window.open('${product.videoUrl}', '_blank')">▶️ مشاهدة الفيديو التعليمي</button>` : ''}
+                    <button onclick="closeModal()" class="secondary" style="margin-top: 1rem; background: var(--gray);">إغلاق</button>
+                </div>
+            </div>
+        `;
+        document.body.insertAdjacentHTML('beforeend', html);
+    }
+
+    function closeModal(event) {
+        const modal = document.querySelector('.modal');
+        if (modal) modal.remove();
+    }
+
+    function renderProjects() {
+        const html = `
+            <div class="hero" style="background: linear-gradient(135deg, var(--primary), var(--primary-light));">
+                <h1>🏗️ سابقة الأعمال</h1>
+                <p>نفخر بتقديم أفضل المنتجات لأكبر المشاريع في مصر والمنطقة العربية</p>
+            </div>
+            <div class="grid-2">
+                ${appData.projects.map(p => `
+                    <div class="card">
+                        <div style="font-size: 3rem; text-align: center;">${p.image}</div>
+                        <h3>${p.name}</h3>
+                        <p><strong>العميل:</strong> ${p.client}</p>
+                        <p>${p.description}</p>
+                        <p><strong>التاريخ:</strong> ${p.date}</p>
+                        ${p.testimonial ? `
+                            <div style="background: var(--light); padding: 1rem; border-radius: 12px; margin-top: 1rem;">
+                                <p>"${p.testimonial}"</p>
+                                <small>- ${p.testimonialBy}</small>
+                            </div>
+                        ` : ''}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        document.getElementById('contentArea').innerHTML = html;
+    }
+
+    function renderAbout() {
+        const html = `
+            <div class="hero">
+                <h1>📖 عن الشركة</h1>
+                <p>${appData.company.fullName}</p>
+            </div>
+            <div class="grid-2">
+                <div class="card">
+                    <h2>🏭 رؤيتنا</h2>
+                    <p>أن نكون الشركة الرائدة في صناعة مواد البناء في المنطقة العربية، من خلال الابتكار والجودة والالتزام بأعلى المعايير العالمية.</p>
+                </div>
+                <div class="card">
+                    <h2>🎯 رسالتنا</h2>
+                    <p>تقديم منتجات عالية الجودة تساهم في بناء مستقبل أفضل، مع الالتزام بالاستدامة البيئية وتطوير الكوادر البشرية.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>📜 الشهادات</h2>
+                <div class="grid-3">
+                    ${appData.certificates.map(c => `
+                        <div style="text-align: center; padding: 1rem;">
+                            <div style="font-size: 2rem;">🏅</div>
+                            <strong>${c.name}</strong>
+                            <p>${c.description}</p>
+                            <small>${c.year}</small>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+        document.getElementById('contentArea').innerHTML = html;
+    }
+
+    function renderContact() {
+        const html = `
+            <div class="hero">
+                <h1>📞 اتصل بنا</h1>
+                <p>نحن هنا لخدمتك، تواصل معنا لأي استفسار</p>
+            </div>
+            <div class="grid-2">
+                <div class="card">
+                    <h2>📞 معلومات الاتصال</h2>
+                    <p><strong>📞 الهاتف:</strong> ${appData.company.phone}</p>
+                    <p><strong>✉️ البريد الإلكتروني:</strong> ${appData.company.email}</p>
+                    <p><strong>📍 العنوان:</strong> ${appData.company.address}</p>
+                    <p><strong>⏰ ساعات العمل:</strong> ${appData.company.workingHours}</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="${appData.company.social.whatsapp}" target="_blank"><button>💬 واتساب</button></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>❓ الأسئلة الشائعة</h2>
+                    ${appData.faq.map(f => `
+                        <div style="margin-bottom: 1rem;">
+                            <strong>❓ ${f.question}</strong>
+                            <p style="color: var(--gray);">${f.answer}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+        document.getElementById('contentArea').innerHTML = html;
+    }
+
+    // ==================== INTERNAL DASHBOARDS ====================
+    function renderDashboard() {
+        if (!currentUser) return renderGuestHome();
+        
+        const today = new Date().toISOString().split('T')[0];
+        const todayCups = appData.dailyCups.filter(c => c.date === today && c.employeeId === currentUser.id);
+        const cupsUsed = todayCups.reduce((sum, c) => sum + c.count, 0);
+        const remaining = currentUser.dailyCups - cupsUsed;
+        const insideVisitors = appData.visitors.filter(v => v.status === 'inside').length;
+        const lowStock = appData.warehouseItems.filter(i => i.quantity <= i.minimum).length;
+        
+        const html = `
+            <div class="grid-4">
+                <div class="stat-card"><div class="stat-number">${cupsUsed} / ${currentUser.dailyCups}</div><div class="stat-label">الأكواب اليومية</div><div>المتبقي: ${remaining}</div></div>
+                <div class="stat-card"><div class="stat-number">${insideVisitors}</div><div class="stat-label">زوار داخل المصنع</div></div>
+                <div class="stat-card"><div class="stat-number">${lowStock}</div><div class="stat-label">أصناف تحتاج طلب</div></div>
+                <div class="stat-card"><div class="stat-number">${appData.productionBatches?.length || 0}</div><div class="stat-label">دفعات الإنتاج هذا الشهر</div></div>
+            </div>
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header"><h2>📊 مرحباً ${currentUser.fullName}</h2><span class="icon">👋</span></div>
+                    <p><strong>المسمى الوظيفي:</strong> ${currentUser.jobTitle}</p>
+                    <p><strong>القسم:</strong> ${currentUser.department}</p>
+                    <p><strong>تاريخ الانضمام:</strong> ${currentUser.joinDate}</p>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h2>📅 آخر النشاطات</h2><span class="icon">📋</span></div>
+                    <p>👥 آخر زائر: ${appData.visitors[appData.visitors.length-1]?.fullName || 'لا يوجد'}</p>
+                    <p>🥤 آخر كوب مسجل: ${todayCups[todayCups.length-1]?.drinkType || 'لا يوجد'}</p>
+                </div>
+            </div>
+        `;
+        document.getElementById('contentArea').innerHTML = html;
+    }
+
+    function renderCanteen() {
+        const today = new Date().toISOString().split('T')[0];
+        const todayCups = appData.dailyCups.filter(c => c.date === today && c.employeeId === currentUser.id);
+        const cupsUsed = todayCups.reduce((sum, c) => sum + c.count, 0);
+        const remaining = currentUser.dailyCups - cupsUsed;
+        
+        let employeesList = '';
+        if (currentUser.role === 'canteen' || currentUser.role === 'admin') {
+            employeesList = `
+                <div class="card">
+                    <h2>👥 تسجيل أكواب للموظفين</h2>
+                    <div class="form-group"><label>اختر الموظف</label><select id="canteenEmployee">${appData.employees.map(e => `<option value="${e.id}">${e.fullName} - ${e.jobTitle} (${e.dailyCups} كوب/يوم)</option>`).join('')}</select></div>
+                    <div class="form-group"><label>نوع المشروب</label><select id="drinkType"><option>قهوة</option><option>شاي</option><option>مياه غازية</option><option>عصير</option><option>مياه معدنية</option></select></div>
+                    <button onclick="recordCupForEmployee()">تسجيل كوب</button>
+                </div>
+            `;
+        }
+        
+        const html = `
+            <div class="card">
+                <h2>🥤 البوفيه - المشروبات</h2>
+                <div class="stat-card" style="margin-bottom:1rem;"><div class="stat-number">${cupsUsed} / ${currentUser.dailyCups}</div><div>الأكواب اليومية</div><div>المتبقي: ${remaining}</div>${remaining > 0 ? '<button onclick="recordSelfCup()" style="margin-top:1rem;">تسجيل كوب لي</button>' : '<div class="badge badge-warning">⚠️ استنفدت حصتك اليومية</div>'}</div>
+                <h3>سجل الأكواب اليوم</h3>
+                <div class="table-responsive"><table><thead><tr><th>الوقت</th><th>نوع المشروب</th></tr></thead><tbody>${todayCups.map(c => `<tr><td>${c.time || 'غير مسجل'}</td><td>${c.drinkType}</td></tr>`).join('') || '<tr><td colspan="2">لا يوجد أكواب مسجلة اليوم</td></tr>'}</tbody></table></div>
+            </div>
+            ${employeesList}
+        `;
+        document.getElementById('contentArea').innerHTML = html;
+    }
+
+    function recordSelfCup() {
+        const today = new Date().toISOString().split('T')[0];
+        const todayCups = appData.dailyCups.filter(c => c.date === today && c.employeeId === currentUser.id);
+        const cupsUsed = todayCups.reduce((sum, c) => sum + c.count, 0);
+        
+        if (cupsUsed >= currentUser.dailyCups) {
+            showToast('لقد استنفدت حصتك اليومية من الأكواب', 'warning');
+            return;
+        }
+        
+        appData.dailyCups.push({
+            date: today,
+            employeeId: currentUser.id,
+            count: 1,
+            drinkType: 'قهوة',
+            time: new Date().toLocaleTimeString('ar-EG'),
+            status: 'normal'
+        });
+        
+        showToast('✓ تم تسجيل الكوب بنجاح', 'success');
+        renderCanteen();
+    }
+
+    function recordCupForEmployee() {
+        const employeeId = document.getElementById('canteenEmployee').value;
+        const drinkType = document.getElementById('drinkType').value;
+        const employee = appData.employees.find(e => e.id === employeeId);
+        const today = new Date().toISOString().split('T')[0];
+        const todayCups = appData.dailyCups.filter(c => c.date === today && c.employeeId === employeeId);
+        const cupsUsed = todayCups.reduce((sum, c) => sum + c.count, 0);
+        
+        if (cupsUsed >= employee.dailyCups && !employee.isException) {
+            showToast(`الموظف ${employee.fullName} استنفد حصته اليومية`, 'warning');
+            return;
+        }
+        
+        appData.dailyCups.push({
+            date: today,
+            employeeId: employeeId,
+            count: 1,
+            drinkType: drinkType,
+            time: new Date().toLocaleTimeString('ar-EG'),
+            status: employee.isException ? 'exception' : 'normal'
+        });
+        
+        showToast(`✓ تم تسجيل ${drinkType} للموظف ${employee.fullName}`, 'success');
+        renderCanteen();
+    }
+
+    function renderWarehouse() {
+        const html = `
+            <div class="card"><h2>📦 إدارة المخازن</h2><div class="table-responsive"><table><thead><tr><th>الكود</th><th>الصنف</th><th>الفئة</th><th>الكمية</th><th>الحد الأدنى</th><th>الموقع</th><th>المورد</th></tr></thead><tbody>${appData.warehouseItems.map(i => `<tr><td>${i.code}</td><td><strong>${i.name}</strong></td><td>${i.category}</td><td style="${i.quantity <= i.minimum ? 'color:red; font-weight:bold' : ''}">${i.quantity} ${i.unit}</td><td>${i.minimum} ${i.unit}</td><td>${i.location}</td><td>${i.supplier}</td></tr>`).join('')}</tbody></table></div></div>
+        `;
+        document.getElementById('contentArea').innerHTML = html;
+    }
+
+    function renderVisitors() {
+        const inside = appData.visitors.filter(v => v.status === 'inside');
+        const history = appData.visitors.filter(v => v.status !== 'inside');
+        
+        const html = `
+            <div class="card"><h2>👥 زوار المصنع الحاليين (${inside.length})</h2><div class="table-responsive"><table><thead><tr><th>الاسم</th><th>الجهة</th><th>سبب الزيارة</th><th>المطلوب زيارته</th><th>وقت الدخول</th></tr></thead><tbody>${inside.map(v => `<tr><td><strong>${v.fullName}</strong><br><small>${v.jobTitle}</small></td><td>${v.company}</td><td>${v.visitReason}</td><td>${v.contactPersonName}</td><td>${v.checkIn}</td></tr>`).join('') || '<tr><td colspan="5">لا يوجد زوار حالياً</td></tr>'}</tbody></table></div></div>
+            <div class="card"><h2>📜 آخر الزوار</h2><div class="table-responsive"><table><thead><tr><th>الاسم</th><th>الجهة</th><th>تاريخ الزيارة</th></tr></thead><tbody>${history.slice(-10).map(v => `<tr><td>${v.fullName}</td><td>${v.company}</td><td>${v.checkIn}</td></tr>`).join('')}</tbody></table></div></div>
+        `;
+        document.getElementById('contentArea').innerHTML = html;
+    }
+
+    function renderHR() {
+        const html = `
+            <div class="card"><h2>👔 الموظفين</h2><div class="table-responsive"><table><thead><tr><th>الكود</th><th>الاسم</th><th>المسمى الوظيفي</th><th>القسم</th><th>البريد الإلكتروني</th><th>الأكواب</th><th>تاريخ الانضمام</th></tr></thead><tbody>${appData.employees.map(e => `<tr><td>${e.code}</td><td>${e.fullName}</td><td>${e.jobTitle}</td><td>${e.department}</td><td>${e.email}</td><td>${e.dailyCups}</td><td>${e.joinDate}</td></tr>`).join('')}</tbody></table></div></div>
+            <div class="card"><h2>📚 الدورات التدريبية</h2><div class="table-responsive"><table><thead><tr><th>الدورة</th><th>المدرب</th><th>التاريخ</th><th>المدة</th></tr></thead><tbody>${appData.trainingCourses?.map(t => `<tr><td>${t.name}</td><td>${t.trainer}</td><td>${t.date}</td><td>${t.duration}</td></tr>`).join('') || '<tr><td colspan="4">لا توجد دورات مسجلة</td></tr>'}</tbody></table></div></div>
+        `;
+        document.getElementById('contentArea').innerHTML = html;
+    }
+
+    function renderProduction() {
+        const html = `
+            <div class="card"><h2>🏭 دفعات الإنتاج</h2><div class="table-responsive"><table><thead><tr><th>رقم الدفعة</th><th>المنتج</th><th>الكمية</th><th>تاريخ الإنتاج</th><th>الوردية</th><th>المشغل</th></tr></thead><tbody>${appData.productionBatches?.map(b => `<tr><td>${b.batchNumber}</td><td>${b.productName}</td><td>${b.quantity}</td><td>${b.productionDate}</td><td>${b.shift}</td><td>${b.operator}</td></tr>`).join('') || '<tr><td colspan="6">لا توجد دفعات إنتاج مسجلة</td></tr>'}</tbody></table></div></div>
+        `;
+        document.getElementById('contentArea').innerHTML = html;
+    }
+
+    function renderQuality() {
+        const html = `
+            <div class="card"><h2>✅ فحوصات الجودة</h2><div class="table-responsive"><table><thead><tr><th>رقم الدفعة</th><th>تاريخ الفحص</th><th>الفحص</th><th>النتيجة</th><th>الحالة</th></tr></thead><tbody>${appData.qualityTests?.map(q => `<tr><td>${q.batchNumber}</td><td>${q.testDate}</td><td>${q.tester}</td><td>${q.results}</td><td><span class="badge ${q.status === 'approved' ? 'badge-success' : 'badge-warning'}">${q.status === 'approved' ? 'معتمد' : 'قيد المراجعة'}</span></td></tr>`).join('') || '<tr><td colspan="5">لا توجد فحوصات مسجلة</td></tr>'}</tbody></table></div></div>
+        `;
+        document.getElementById('contentArea').innerHTML = html;
+    }
+
+    function renderSales() {
+        const html = `
+            <div class="card"><h2>💰 العملاء</h2><div class="table-responsive"><table><thead><tr><th>اسم العميل</th><th>الهاتف</th><th>المندوب</th><th>الرصيد</th></tr></thead><tbody>${appData.customers?.map(c => `<tr><td><strong>${c.name}</strong></td><td>${c.phone}</td><td>${c.salesRep}</td><td style="color:${c.balance > 0 ? 'red' : 'green'}">${c.balance.toLocaleString()} ج.م</td></tr>`).join('') || '<tr><td colspan="4">لا يوجد عملاء مسجلين</td></tr>'}</tbody></table></div></div>
+            <div class="card"><h2>📄 الفواتير</h2><div class="table-responsive"><table><thead><tr><th>رقم الفاتورة</th><th>التاريخ</th><th>العميل</th><th>الإجمالي</th><th>حالة الدفع</th></tr></thead><tbody>${appData.invoices?.map(i => `<tr><td>${i.number}</td><td>${i.date}</td><td>${appData.customers?.find(c => c.code === i.customer)?.name || i.customer}</td><td>${i.total.toLocaleString()} ج.م</td><td>${i.paymentStatus}</td></tr>`).join('') || '<tr><td colspan="5">لا توجد فواتير مسجلة</td></tr>'}</tbody></table></div></div>
+        `;
+        document.getElementById('contentArea').innerHTML = html;
+    }
+
+    function renderReports() {
+        const lowStock = appData.warehouseItems.filter(i => i.quantity <= i.minimum);
+        const totalCupsThisMonth = appData.dailyCups.filter(c => c.date.startsWith('2026-03')).length;
+        
+        const html = `
+            <div class="grid-2">
+                <div class="stat-card"><div class="stat-number">${appData.employees.length}</div><div>إجمالي الموظفين</div></div>
+                <div class="stat-card"><div class="stat-number">${totalCupsThisMonth}</div><div>إجمالي الأكواب هذا الشهر</div></div>
+                <div class="stat-card"><div class="stat-number">${appData.visitors.length}</div><div>إجمالي الزوار</div></div>
+                <div class="stat-card"><div class="stat-number">${lowStock.length}</div><div>أصناف تحتاج طلب</div></div>
+            </div>
+            <div class="card"><h2>⚠️ أصناف تحتاج إعادة طلب</h2><div class="table-responsive"><table><thead><tr><th>الصنف</th><th>الكمية الحالية</th><th>الحد الأدنى</th><th>المورد</th></tr></thead><tbody>${lowStock.map(i => `<tr><td><strong>${i.name}</strong></td><td style="color:red">${i.quantity} ${i.unit}</td><td>${i.minimum} ${i.unit}</td><td>${i.supplier}</td></tr>`).join('') || '<tr><td colspan="4">✅ جميع الأصناف ضمن الحد الآمن</td></tr>'}</tbody></table></div></div>
+        `;
+        document.getElementById('contentArea').innerHTML = html;
+    }
+
+    // Initialize
+    loadData();
+</script>
+</body>
+</html>
